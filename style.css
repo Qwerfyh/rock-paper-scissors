@@ -1,0 +1,71 @@
+body, html{
+    background-color: black;
+    color: white;
+}
+
+button{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    color: white;
+    border: solid 3px white;
+    cursor: pointer;
+}
+.button-container{
+    display: flex;
+    justify-content: space-around;
+}
+button:hover{
+    background-color: white;
+    color: #000;
+    border: red solid 2px;
+   transition: .5s ease-in-out;
+   transform: translateY(-10px);
+   transition: .5s ease-in-out;
+ 
+}
+i{
+    font-size: 30px;
+    color: fff;
+}
+i:hover{
+    color: black;
+}
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+h4{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 130px;
+    margin-bottom: 50px;
+}
+@media (max-width: 700px){
+    .button-container{
+        display: flex;
+        flex-direction: column ;
+        justify-content: center;
+        align-items: center;
+      
+    }
+    
+button{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    color: white;
+    border: solid 3px white;
+    cursor: pointer;
+     margin-top: 30px;
+     margin-bottom: 30px;
+}
+h4{
+    font-size: 15px;
+    flex-wrap: wrap;
+}
+}

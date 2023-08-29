@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock paper scissors</title>
+    <script src="prac.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/412b65ea95.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>rock paper scissors</h1>
+    <div class="button-container">
+        <button onclick=" 
+           pickComputerMove()
+            let result = '';
+
+            if (computerMove === 'rock') {
+                result = 'it\'s a tie';
+            } else if (computerMove === 'paper') {
+                result = 'you lose';
+            } else if (computerMove === 'scissors') {
+                result = 'you win';
+            }
+            if (result === 'you win') {
+            score.wins++;
+        }else if (result === 'you lose') {
+            score.losses++;
+        }else if (result === 'it\'s a tie') {
+            score.ties++;
+        }
+
+        alert(`you picked rock. The computer picked ${computerMove}. ${result}\n you: ${score.wins}, \n computer: ${ score.losses}\n ties:  ${score.ties}`);
+            "><i class="fa-regular fa-hand-back-fist"></i></button>
+
+        <button onclick="
+    
+    const randomNum = Math.random();
+    pickComputerMove();
+
+        let result = '';
+
+        if (computerMove === 'paper') {
+        result = 'it\'s a tie';
+        } else if (computerMove === 'scissors') {
+        result = 'you lose';
+        } else if (computerMove === 'rock') {
+        result = 'you win';
+        }
+        if (result === 'you win') {
+            score.wins++;
+        }else if (result === 'you lose') {
+            score.losses++;
+        }else if (result === 'it\'s a tie') {
+            score.ties++;
+        }
+
+        alert(`you picked paper. The computer picked ${computerMove}. ${result}\n you: ${score.wins}, \n computer: ${ score.losses}\n ties:  ${score.ties}`);
+    
+    "><i class="fa-regular fa-hand"></i></button>
+
+        <button onclick="
+   pickComputerMove();
+        let result = '';
+
+        if (computerMove === 'scissors') {
+        result = 'it\'s a tie';
+        } else if (computerMove === 'rock') {
+        result = 'you lose';
+        } else if (computerMove === 'paper') {
+        result = 'you win';
+        }
+        
+        if (result === 'you win') {
+            score.wins++;
+        }else if (result === 'you lose') {
+            score.losses++;
+        }else if (result === 'it\'s a tie') {
+            score.ties++;
+        }
+
+        alert(`you picked scissors. The computer picked ${computerMove}. ${result}\n you: ${score.wins}, \n computer: ${ score.losses}\n ties:  ${score.ties}`);
+
+"><i class="fa-solid fa-hand-scissors"></i></button>
+
+        <p class="js-score"></p>
+
+        <button onclick="
+ score.wins = 0;
+ score.losses = 0;
+ score.ties = 0;  
+ alert('score has been reset'); 
+    ">reset score</button>
+    </div>
+
+
+    <h4> © copyright 2023 Viktor kode</h4>
+</body>
+<script>
+
+    const score = {
+        wins: 0,
+        losses: 0,
+        ties: 0
+    }
+
+    
+
+
+    console.log(localStorage.getItem('score'));
+
+
+    localStorage.setItem('String', JSON.stringify(score));
+
+    let computerMove = '';
+    function pickComputerMove() {
+        const randomNum = Math.random();
+
+
+
+        if (randomNum >= 0 && randomNum < 1 / 3) {
+            computerMove = 'rock';
+        } else if (randomNum >= 1 / 3 && randomNum < 2 / 3) {
+            computerMove = 'paper';
+        } else if (randomNum >= 2 / 3 && randomNum < 1) {
+            computerMove = 'scissors';
+        }
+        console.log(computerMove);
+
+
+    }
+
+    function reset() {
+        socre.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+    }
+</script>
+
+</html>
